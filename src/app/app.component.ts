@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
-
+import { Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.less'
+  styleUrls: ['./app.component.less'],
+  standalone: false
 })
-export class AppComponent {
-  title = 'ng-zorro-app';
+export class AppComponent{
 }

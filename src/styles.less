@@ -1,1 +1,193 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+
+/* =======================
+   Static Theme Variables
+========================== */
+@primary-color: #1890ff;
+@success-color: #52c41a;
+@warning-color: #faad14;
+@error-color: #f5222d;
+@info-color: #1890ff;
+
+/* =======================
+   Global CSS Variables
+========================== */
+:root {
+  --primary-color: @primary-color;
+  --primary-color-rgb: 24, 144, 255;
+  --success-color: @success-color;
+  --warning-color: @warning-color;
+  --error-color: @error-color;
+  --info-color: @info-color;
+}
+
+/* =======================
+   Theme - Dark
+========================== */
+[data-theme="dark"] {
+  --primary-color: #177ddc;
+  --primary-color-rgb: 23, 125, 220;
+  --success-color: #49aa19;
+  --warning-color: #d89614;
+  --error-color: #dc4446;
+  --info-color: #177ddc;
+  --background-color: #1f1f1f;
+  --text-color: rgba(255, 255, 255, 0.85);
+}
+
+/* =======================
+   Theme - Purple
+========================== */
+[data-theme="purple"] {
+  --primary-color: #722ed1;
+  --primary-color-rgb: 114, 46, 209;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
+  --info-color: #722ed1;
+}
+
+/* =======================
+   Theme - Green
+========================== */
+[data-theme="green"] {
+  --primary-color: #52c41a;
+  --primary-color-rgb: 82, 196, 26;
+  --success-color: #389e0d;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
+  --info-color: #52c41a;
+}
+
+/* =======================
+   Buttons
+========================== */
+.ant-btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  filter: brightness(110%);
+}
+.ant-btn-primary:active {
+  filter: brightness(90%);
+}
+
+/* =======================
+   Progress Bars
+========================== */
+.ant-progress-bg {
+  background-color: var(--primary-color) !important;
+}
+.ant-progress-circle-path {
+  stroke: var(--primary-color) !important;
+}
+.ant-progress-text {
+  color: rgba(0, 0, 0, 0.85);
+}
+[data-theme="dark"] .ant-progress-text {
+  color: var(--text-color) !important;
+}
+
+/* =======================
+   Tags
+========================== */
+.ant-tag:not([class*="ant-tag-"]) {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* =======================
+   Alerts
+========================== */
+.ant-alert-success {
+  border-color: var(--success-color);
+}
+.ant-alert-info {
+  border-color: var(--primary-color);
+}
+.ant-alert-warning {
+  border-color: var(--warning-color);
+}
+.ant-alert-error {
+  border-color: var(--error-color);
+}
+.ant-alert-icon {
+  color: inherit;
+}
+
+/* =======================
+   Inputs
+========================== */
+.ant-input:focus,
+.ant-input-focused {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+.ant-input:hover {
+  border-color: var(--primary-color);
+}
+
+/* =======================
+   Select Dropdown
+========================== */
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: var(--primary-color);
+}
+.ant-select-focused .ant-select-selector {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+.ant-select-dropdown .ant-select-item-option-selected {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+}
+
+/* =======================
+   Cards
+========================== */
+.ant-card {
+  background-color: #fff;
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.85);
+}
+[data-theme="dark"] .ant-card {
+  background-color: var(--background-color);
+  border-color: #303030;
+  color: var(--text-color);
+}
+[data-theme="dark"] .ant-card-head-title {
+  color: var(--text-color) !important;
+}
+
+/* =======================
+   Layout Header & Footer
+========================== */
+.ant-layout-header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+[data-theme="dark"] .ant-layout-header {
+  background-color: #141414;
+}
+
+.ant-layout-footer {
+  background-color: #f0f2f5;
+  color: rgba(0, 0, 0, 0.65);
+}
+[data-theme="dark"] .ant-layout-footer {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+/* =======================
+   Form Labels
+========================== */
+.ant-form-item-label > label {
+  color: rgba(0, 0, 0, 0.85);
+}
+[data-theme="dark"] .ant-form-item-label > label {
+  color: var(--text-color) !important;
+}

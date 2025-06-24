@@ -1,0 +1,20 @@
+<div class="theme-switcher-buttons">
+  <button 
+    nz-button 
+    *ngFor="let theme of themes" 
+    [nzType]="currentTheme === theme.name ? 'primary' : 'default'" 
+    (click)="selectTheme(theme.name)">
+    
+    <span 
+      class="theme-color-indicator" 
+      [style.backgroundColor]="theme.primaryColor">
+    </span>
+    
+    {{ theme.displayName }}
+  </button>
+
+  <button nz-button (click)="toggleDarkMode()">
+    <i nz-icon [nzType]="isDarkMode ? 'sun' : 'moon'" nzTheme="outline"></i>
+    {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+  </button>
+</div>
